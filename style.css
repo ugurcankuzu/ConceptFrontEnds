@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Zen+Loop&display=swap');
+
+body{
+    scroll-behavior: smooth;
+    margin:0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #171714;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.navbar{
+    color: #fff;
+    width: 100%;
+    height: 80px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar .logo{
+    font-size: 20pt;
+    letter-spacing: 1.5px;
+
+}
+.navbar .navigation ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.navbar .navigation .link{
+    align-self: center;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    padding: 5px;
+    text-align: center;
+}
+#main{
+    border: 1px solid #80c0b0;
+    border-radius: 5px;
+    background-color: rgba(128, 192, 176,0.3);
+}
+.pages::before{
+    content: "";
+    width: 0%;
+    height: 50%;
+    background-color: rgba(128, 192, 176,0.3);
+    position: absolute;
+    transition: 1s ease-in-out;
+    top:0;
+    left:0;
+}
+.pages:hover::before{
+    width: 100%;
+    
+}
+.pages::after{
+    content: "";
+    width: 0%;
+    height: 50%;
+    background-color: rgba(128, 192, 176,0.3);
+    position: absolute;
+    transition: 1s ease-in-out;
+    bottom:0;
+    right:0;
+}
+.pages:hover::after{
+    width: 100%;
+    
+}
+.navbar .navigation ul .pages{
+    list-style-type: none;
+    padding: 0 5px 0 5px;
+    margin: 0px 5px 0px 5px;
+    letter-spacing: 3px;
+    color: #fff;
+}
+.banner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #80c0b0;
+    font-family: 'Roboto',sans-serif;
+
+}
+.card{
+    width: 80%;
+    min-width: 400px;
+    height: 50%;
+    background-color: #171714;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 10px 10px 0px #505050;
+}
+.card h1{
+    z-index: 2;
+    font-size: 52pt;
+    color: #80c0b0;
+    text-shadow: 4px 4px 0px #505050;
+    letter-spacing: 15px;
+}
+.card p{
+    color: #fff;
+    font-family: 'Zen Loop', cursive;
+    font-size: 20pt;
+    letter-spacing: 2px;
+}
+.scroll{
+    position: absolute;
+    width: 25px;
+    height: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    animation: distract 1s ease-in infinite;
+}
+.scroll .btn{
+    position: absolute;
+    height: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    top: 10px;
+    
+}
+.down{
+    position: absolute;
+    bottom: 0;
+    color: rgba(0,0,0,0.3);
+    text-align: center;
+    letter-spacing: 2px;
+}
+.info{
+    width: 100%;
+    height: 100%;
+    background-color: #171714;
+    position: relative;
+    font-family: 'Roboto',sans-serif;
+}
+.info .stats{
+    height: 120px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: #fff;
+    margin-top: 30px;
+    
+}
+.info .stat{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-right: 1px solid #fff;
+}
+.info .stat p{
+    font-size: 18pt;
+    text-align: center;
+}
+.info .stats i{
+    filter: drop-shadow(3px 3px 0px #305152);
+    font-size: 34pt;
+}
+
+.last{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    align-items: center;
+    padding: 50px;
+}
+.last h1{
+    color: #80c0b0;
+    filter: drop-shadow(5px 5px 0px #303030);
+    font-size: 50pt;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.last p{
+    font-size: 32pt;
+    color: #fff;
+}
+#anchor{
+    border: 1px solid #80c0b0;
+    border-radius: 5px;
+    background-color: rgba(128, 192, 176,0.3);
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 3px;
+    transition: 1s ease-in;
+}
+#anchor:hover{
+    background-color: rgba(128, 192, 176, 1);
+    color: #171714;
+}
+
+
+
+
+
+
+
+
+
+
+/* Animations */
+@keyframes distract {
+    0%{
+        bottom: 40px;
+    }50%{
+        bottom: 50px;
+    }100%{
+        bottom: 40px;
+    }
+}

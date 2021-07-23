@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinyles</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/02e7caa908.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">VINYLES</div>
+      <div class="navigation">
+        <ul>
+          <a class="link" href="#info"><li class="pages">ABOUT US</li></a>
+          <a class="link" href="#"><li class="pages">PRICING</li></a>
+          <a id="main" class="link" href="#">
+            <li class="pages">PUBLISH NOW</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+    <div on class="banner">
+      <div id="cards" class="card">
+        <h1>VINYLES</h1>
+        <p>
+          Let Your Voice Be Heard
+          <br />
+          From Everywhere
+        </p>
+      </div>
+      <div class="scroll">
+        <div class="btn"></div>
+      </div>
+      <p class="down">Scroll Down To Get Information</p>
+    </div>
+    <div id="info" class="info">
+      <div class="stats">
+        <div class="stat">
+          <i class="fas fa-users"></i>
+          <p id="users"></p>
+        </div>
+        <div class="stat">
+          <i class="fas fa-record-vinyl"></i>
+          <p id="company"></p>
+        </div>
+        <div style="border: none;" class="stat">
+          <i class="fas fa-file-signature"></i>
+          <p id="contract"></p>
+        </div>
+      </div>
+      <div class="last">
+          <h1>TAKE YOUR PLACE NOW</h1>
+          <p>
+            Since the day we were founded, we have represented 128 artists<br> from all over the world.
+        </p>
+        <br>
+        <p>
+            We have 53 real market from different countries.You can take an <br>area which is yours today.
+        </p>
+        <br>
+        <p>
+            You'll have many contract opportunities if you choose us. So what<br> are you waiting for ?
+        </p>
+        <br>
+        <a id="anchor" href="#">PUBLISH NOW</a>
+      </div>
+    </div>
+    <script>
+      var text = document.getElementById('users')
+      var company = document.getElementById('company')
+      var contract = document.getElementById('contract')
+      var i = 0,
+        j = 0,
+        k = 0
+
+      document.addEventListener('load', onScreen())
+      function countArtists() {
+        text.innerHTML = `${i}<br>ARTIST`
+        if (i < 128) {
+          i++
+          setTimeout(countArtists, (150 - i) / 2)
+        }
+      }
+      function countComp() {
+        company.innerHTML = `${j}<br>MARKET`
+        if (j < 53) {
+          j++
+          setTimeout(countComp, 73 - j)
+        }
+      }
+      function countContract() {
+        contract.innerHTML = `${k}<br>ALBUM CONTRACT`
+        if (k < 1216) {
+          k++
+          setTimeout(countContract, (1304 - k) / 128)
+        }
+      }
+      function wrapper() {
+        countArtists()
+        countComp()
+        countContract()
+      }
+      //Element Ekranda mı ?
+      function onScreen() {
+        const rect = text.getBoundingClientRect() //Belirlenen Elementin konumu
+
+        if (
+          rect.top >= 0 && //Elementin Üstten konumu 0'a eşit veya büyükse 
+          rect.left >= 0 &&//Elementin sağdan konumu 0'a eşit veya büyükse
+          rect.bottom <= window.innerHeight && // Elementin alttan konumu Browser Penceresinin yüksekliğinden küçük veya eşitse
+          rect.right <= window.innerWidth // Elementin sağdan konumu Browser Penceresinin genişliğinden küçük veya eşitse 
+        ) /*Tüm bu konum şartlarını sağlıyorsa animasyon fonksiyonlarını çalıştır */{
+          wrapper()
+        } else /* Sağlamıyorsa setTimeout fonksiyonu ile 120 milisaniyede bir recursive olarak fonksiyonu geri çağır */{
+          setTimeout(onScreen, 120)
+        }
+      }
+    </script>
+  </body>
+</html>
