@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+    grid-auto-rows: fit-content;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    white-space: wrap;
+}
+.img{
+    width: 50%;
+}
+.card{
+    margin: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    width: 300px;
+    height: 350px;
+    display: grid;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: "top"
+    "bottom";
+}
+.top{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "title title"
+    "price button"
+    ;
+    justify-items: center;
+    align-items: center;
+}
+#count{
+    grid-row: 5/5;
+    align-items: center;
+    justify-content: center;
+    grid-column: 3/3;
+    position: relative;
+    height: 50px;
+}
+#number{
+    width: 25px;
+    height: 25px;
+    background: #940000;
+    color: #fff;
+    position: absolute;
+    right: -12.5px;
+    top: -12.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+.title{
+    font-size: 12pt;
+    text-align: center;
+}
