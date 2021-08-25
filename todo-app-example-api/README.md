@@ -1,5 +1,5 @@
 <h1>API FOR CRUD OPERATIONS IN MONGODB</h1>
-<p>Created for study. It's just an example not a product.</p>
+<p>Created for training.</p>
 <h2>USED TECHNOLOGIES</h2>
 <p>- Node JS<br>-MongoDB</p>
 
