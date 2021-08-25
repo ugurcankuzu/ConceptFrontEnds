@@ -1,0 +1,30 @@
+.intro{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin: 0 0 50px 0;    
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+ .bg{
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    filter: brightness(.3);
+
+}
+.intro h1{
+    text-align: center;
+    font-size: 50pt;
+    letter-spacing: 5px;
+
+}
+.intro p{
+    font-size: 25pt;
+    color: #ddd;
+    
+}
