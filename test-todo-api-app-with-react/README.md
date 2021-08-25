@@ -17,7 +17,7 @@ You will also see any lint errors in the console.
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h1>It's an example React Todo App for Testing Todo API </h1>
-<p>Created for training.</p>
+<p>Created for practice.</p>
 
 <h1>Used Technologies</h1>
 
