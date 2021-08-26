@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadow Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="intro">
+        <h1 class="title">CSS BOX SHADOW GENERATOR</h1>
+        <p class="desc">Make Your Design Perfect with Lighting</p>
+        <p class="credits">Made by Uğurcan KUZU</p>
+    </div>
+    <div class="generator">
+        <div class="result">
+            <div id="box" class="box"></div>
+        </div>
+        <div class="settings">
+            <div class="bg">
+                <label for="bg">Box Background Color: </label>
+                <input type="color" name="bg" id="bg" value="#ffffff">
+            </div>
+            <div class="x">
+                <label for="x">Box-Shadow X-offset</label>
+                <input type="range" min="-250" max="250" id="x" name="x" value="0">
+
+            </div>
+            <div class="y">
+                <label for="y">Box-Shadow Y-offset</label>
+                <input type="range" min="-250" max="250" id="y" name="y" value="0">
+            </div>
+            <div class="spread">
+                <label for="spread">Box-Shadow Spread Radius</label>
+                <input type="range" min="0" max="100" id="spread" name="spread">
+            </div>
+            <div class="color">
+                <label for="color">Box-Shadow Color:</label>
+                <input type="color" name="color" id="color" value="#000000">
+            </div>
+            <div class="text">
+                <label for="text">Current CSS Box-Shadow Settings:</label>
+                <div name="text" id="text"></div>
+            </div>
+        </div>
+    </div>
+    <script src="generator.js"></script>
+
+</body>
+</html>
